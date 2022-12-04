@@ -9,13 +9,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var tabIdx = 0
+    @StateObject private var envObj = EnvObject()
    
     var body: some View {
         VStack {
             HStack(spacing: 40) {
                 Button {
-                    tabIdx = 0
+                    envObj.tabIdx = 0
                 } label: {
                     VStack {
                         Image(systemName: "square.grid.2x2.fill")
@@ -28,7 +28,7 @@ struct ContentView: View {
                 .buttonStyle(.plain)
 
                 Button {
-                    tabIdx = 1
+                    envObj.tabIdx = 1
                 } label: {
                     VStack {
                         Image(systemName: "message.fill")
@@ -42,15 +42,17 @@ struct ContentView: View {
             }
             
             Group {
-                switch (tabIdx) {
+                switch (envObj.tabIdx) {
                 case 0:
                     DynsView()
                 default:
                     CommentsView()
                 }
             }
+            .environmentObject(envObj)
 
         }
+        .background(Color.hex("#f3f5f7"))
         .frame(width: 500, height: 1000)
     }
 }
@@ -58,5 +60,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environment(\.colorScheme, .light)
     }
 }

@@ -4,4 +4,3 @@
 
 使用: `pod install` 
 
-本项目为未完成作品，仅实现动态管理，新项目迁移至Vue项目：<https://github.com/Zrzzzz/BiliMonitor-Vue>

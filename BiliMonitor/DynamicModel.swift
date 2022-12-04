@@ -406,12 +406,12 @@ struct ThreePointItem: Codable {
 
 // MARK: - ModuleStat
 struct ModuleStat: Codable {
-    let comment, forward: Comment?
+    let comment, forward: Counter?
     let like: Like?
 }
 
 // MARK: - Comment
-struct Comment: Codable {
+struct Counter: Codable {
     let count: Int?
     let forbidden: Bool?
 }

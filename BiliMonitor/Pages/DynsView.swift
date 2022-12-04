@@ -10,21 +10,27 @@ import SDWebImageSwiftUI
 
 struct DynsView: View {
     @Environment(\.openURL) var openURL
+    @EnvironmentObject var envObj: EnvObject
+    
     @State private var dyns: [Dynamic] = []
     @State private var noMore: Bool = false
     @State private var lastOffset: String = ""
-    
     @State private var stopLoad = false
+    
     @State private var selectedUper = Uper()
     @State private var upers: [Uper] = [
         // add upers here
+        Uper(name: "莫大韭菜", uid: "525121722"),
+        Uper(name: "莫大稳住", uid: "370866794"),
+        Uper(name: "吊打跪族", uid: "492309991"),
     ]
+    
+    
     
     private let UD_UPERS_KEY = "UD_UPERS_KEY"
     
     private func controlBar() -> some View {
         HStack {
-        
             Picker("UP主选择：", selection: $selectedUper) {
                 ForEach(upers, id: \.self) { up in
                     Text(up.name)
@@ -62,7 +68,7 @@ struct DynsView: View {
                 Text(dyn.modules?.moduleAuthor?.name ?? "")
                     .bold()
                     .foregroundColor(.biliPink)
-                Text(convertDate(ts: dyn.modules?.moduleAuthor?.pubTs ?? 0))
+                Text(TimeUtil.convertDate(ts: dyn.modules?.moduleAuthor?.pubTs ?? 0))
                     .font(.caption)
             }
             
@@ -119,6 +125,16 @@ struct DynsView: View {
             } else {
                 Text("不知道是什么")
             }
+        }
+        .contextMenu {
+            Button {
+                envObj.oid = dyn.idStr ?? ""
+                envObj.uid = selectedUper.uid
+                envObj.tabIdx = 1
+            } label: {
+                Text("监控评论")
+            }
+
         }
     }
     
@@ -213,22 +229,6 @@ struct DynsView: View {
         
     }
     
-    private func convertDate(ts: Int) -> String {
-        let date = Date(timeIntervalSince1970: TimeInterval(ts))
-        let cur = Date()
-        let dis = date.distance(to: cur)
-        if dis < 60 * 60 {
-            return "\(Int(dis/60))分前"
-        } else if dis < 60 * 60 * 24 {
-            return "\(Int(dis/60/60))小时前"
-        }
-        let dateFmt = DateFormatter()
-        dateFmt.dateFormat = "MM-dd HH:mm"
-        
-        
-        return dateFmt.string(from: date)
-    }
-    
     private func reload() {
         self.lastOffset = ""
         self.noMore = false
@@ -239,9 +239,9 @@ struct DynsView: View {
         let offset = lastOffset
         Task {
             do {
-                let data = try await DynamicManager.getDynamics(uid: self.selectedUper.uid, offset: offset)
+                let data = try await NetManager.getDynamics(uid: self.selectedUper.uid, offset: offset)
                 let dyns = data?.items ?? []
-                if data?.hasMore ?? false == false {
+                if !(data?.hasMore ?? false) {
                     noMore = true
                 }
                 self.dyns += dyns

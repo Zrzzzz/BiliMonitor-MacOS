@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		44C74D8F837258D613CFF712 /* Pods_BiliMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CEDB94967E3F0B29918EF19 /* Pods_BiliMonitor.framework */; };
+		D30EE167293B469800AB79BD /* EnvModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30EE166293B469800AB79BD /* EnvModel.swift */; };
+		D30EE169293B4B3400AB79BD /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30EE168293B4B3400AB79BD /* CommentModel.swift */; };
+		D30EE16B293B65FE00AB79BD /* TimeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30EE16A293B65FE00AB79BD /* TimeUtil.swift */; };
 		D343747A29387EA000C53E7D /* BiliMonitorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D343747929387EA000C53E7D /* BiliMonitorApp.swift */; };
 		D343747C29387EA000C53E7D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D343747B29387EA000C53E7D /* ContentView.swift */; };
 		D343747E29387EA200C53E7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D343747D29387EA200C53E7D /* Assets.xcassets */; };
 		D343748129387EA200C53E7D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D343748029387EA200C53E7D /* Preview Assets.xcassets */; };
 		D34374882938844800C53E7D /* DynamicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34374872938844800C53E7D /* DynamicModel.swift */; };
-		D343748A2938868600C53E7D /* DynamicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34374892938868600C53E7D /* DynamicManager.swift */; };
+		D343748A2938868600C53E7D /* NetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34374892938868600C53E7D /* NetManager.swift */; };
 		D3E45A5529390591002C20F2 /* DynsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E45A5429390591002C20F2 /* DynsView.swift */; };
 		D3E45A5A2939AE0C002C20F2 /* ColorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E45A592939AE0C002C20F2 /* ColorUtil.swift */; };
 		D3E45A5D2939E77F002C20F2 /* UperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E45A5C2939E77F002C20F2 /* UperModel.swift */; };
@@ -24,13 +27,16 @@
 		0EC469EB820438FBC352F366 /* Pods-BiliMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiliMonitor.debug.xcconfig"; path = "Target Support Files/Pods-BiliMonitor/Pods-BiliMonitor.debug.xcconfig"; sourceTree = "<group>"; };
 		3CEDB94967E3F0B29918EF19 /* Pods_BiliMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BiliMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E74CDB653C5B0C8914D9C45 /* Pods-BiliMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiliMonitor.release.xcconfig"; path = "Target Support Files/Pods-BiliMonitor/Pods-BiliMonitor.release.xcconfig"; sourceTree = "<group>"; };
+		D30EE166293B469800AB79BD /* EnvModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvModel.swift; sourceTree = "<group>"; };
+		D30EE168293B4B3400AB79BD /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
+		D30EE16A293B65FE00AB79BD /* TimeUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUtil.swift; sourceTree = "<group>"; };
 		D343747629387EA000C53E7D /* BiliMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiliMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D343747929387EA000C53E7D /* BiliMonitorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiliMonitorApp.swift; sourceTree = "<group>"; };
 		D343747B29387EA000C53E7D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D343747D29387EA200C53E7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D343748029387EA200C53E7D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D34374872938844800C53E7D /* DynamicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicModel.swift; sourceTree = "<group>"; };
-		D34374892938868600C53E7D /* DynamicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicManager.swift; sourceTree = "<group>"; };
+		D34374892938868600C53E7D /* NetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetManager.swift; sourceTree = "<group>"; };
 		D3E45A5429390591002C20F2 /* DynsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynsView.swift; sourceTree = "<group>"; };
 		D3E45A592939AE0C002C20F2 /* ColorUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtil.swift; sourceTree = "<group>"; };
 		D3E45A5B2939BBF7002C20F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -93,9 +99,12 @@
 				D343747B29387EA000C53E7D /* ContentView.swift */,
 				D3E45A5E2939F18C002C20F2 /* Pages */,
 				D3E45A592939AE0C002C20F2 /* ColorUtil.swift */,
-				D34374892938868600C53E7D /* DynamicManager.swift */,
+				D30EE16A293B65FE00AB79BD /* TimeUtil.swift */,
+				D34374892938868600C53E7D /* NetManager.swift */,
 				D34374872938844800C53E7D /* DynamicModel.swift */,
+				D30EE168293B4B3400AB79BD /* CommentModel.swift */,
 				D3E45A5C2939E77F002C20F2 /* UperModel.swift */,
+				D30EE166293B469800AB79BD /* EnvModel.swift */,
 				D343747D29387EA200C53E7D /* Assets.xcassets */,
 				D343747F29387EA200C53E7D /* Preview Content */,
 			);
@@ -235,10 +244,13 @@
 			files = (
 				D3E45A5D2939E77F002C20F2 /* UperModel.swift in Sources */,
 				D343747C29387EA000C53E7D /* ContentView.swift in Sources */,
+				D30EE16B293B65FE00AB79BD /* TimeUtil.swift in Sources */,
 				D3E45A5529390591002C20F2 /* DynsView.swift in Sources */,
-				D343748A2938868600C53E7D /* DynamicManager.swift in Sources */,
+				D343748A2938868600C53E7D /* NetManager.swift in Sources */,
 				D3E45A5A2939AE0C002C20F2 /* ColorUtil.swift in Sources */,
+				D30EE167293B469800AB79BD /* EnvModel.swift in Sources */,
 				D34374882938844800C53E7D /* DynamicModel.swift in Sources */,
+				D30EE169293B4B3400AB79BD /* CommentModel.swift in Sources */,
 				D3E45A602939F1A5002C20F2 /* CommentsView.swift in Sources */,
 				D343747A29387EA000C53E7D /* BiliMonitorApp.swift in Sources */,
 			);
@@ -381,6 +393,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -417,6 +430,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
